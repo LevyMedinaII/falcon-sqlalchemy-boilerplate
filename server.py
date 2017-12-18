@@ -2,22 +2,19 @@ import json
 import falcon
 import requests
 
-class TestResource(object):
-    def on_get(self, req, res):
-        #Test route
-        root = 'https://reqres.in'
-        route = '/api/users?page=2'
-
-        test_data = requests.get(root + route)
-        res.status = falcon.HTTP_200  # This is the default status
-        test_data = test_data.json()
-        res.body = json.dumps(test_data)
+from resources import AppliancesResource,  SampleResource
+from db import SQLAlchemySessionManager, Session, Sample
 
 # falcon.API instances are callable WSGI apps
 app = falcon.API()
 
-# Resources are represented by long-lived class instances
-test = TestResource()
+# set x-www-form-urlencoded to be available via req.params
+app.req_options.auto_parse_form_urlencoded = True
 
-# things will handle all requests to the '/things' URL path
-app.add_route('/test', test)
+# Resources are represented by long-lived class instances
+sample = SampleResource()
+appliances = AppliancesResource()
+
+# Routes
+app.add_route('/sample', sample)
+app.add_route('/appliances', appliances)
