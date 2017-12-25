@@ -5,12 +5,12 @@ verify_ssl = true
 name = "pypi"
 
 
-[dev-packages]
-
-
-
 [packages]
 
-requests = "*"
 falcon = "*"
-gunicorn = "*"
+requests = "*"
+sqlalchemy = "*"
+
+
+[dev-packages]
+

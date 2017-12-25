@@ -1,19 +1,19 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8462d8f90c85409b234a09b6417669ce6aaf96fa4e430c9ebcf75407492d8a27"
+            "sha256": "6318efddf15eec75338ca04cedbfcbd4907cec3c99f445eaf4b7eb7102ca61f9"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
-            "implementation_version": "0",
+            "implementation_version": "3.6.4",
             "os_name": "nt",
             "platform_machine": "AMD64",
             "platform_python_implementation": "CPython",
             "platform_release": "10",
             "platform_system": "Windows",
-            "platform_version": "10.0.15063",
-            "python_full_version": "2.7.12",
-            "python_version": "2.7",
+            "platform_version": "10.0.16299",
+            "python_full_version": "3.6.4",
+            "python_version": "3.6",
             "sys_platform": "win32"
         },
         "pipfile-spec": 6,
@@ -48,13 +48,6 @@
             ],
             "version": "==1.3.0"
         },
-        "gunicorn": {
-            "hashes": [
-                "sha256:75af03c99389535f218cc596c7de74df4763803f7b63eb09d77e92b3956b36c6",
-                "sha256:eee1169f0ca667be05db3351a0960765620dad53f53434262ff8901b68a1b622"
-            ],
-            "version": "==19.7.1"
-        },
         "idna": {
             "hashes": [
                 "sha256:8c7309c718f94b3a625cb648ace320157ad16ff131ae0af362c9f21b80ef6ec4",
@@ -82,6 +75,12 @@
                 "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
             ],
             "version": "==1.11.0"
+        },
+        "sqlalchemy": {
+            "hashes": [
+                "sha256:8b79a5ed91cdcb5abe97b0045664c55c140aec09e5dd5c01303e23de5fe7a95a"
+            ],
+            "version": "==1.1.15"
         },
         "urllib3": {
             "hashes": [
