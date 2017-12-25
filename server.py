@@ -1,20 +1,19 @@
-import json
+"""Application module file"""
 import falcon
-import requests
 
-from resources import AppliancesResource,  SampleResource
-from db import SQLAlchemySessionManager, Session, Sample
+from resources import SampleResource
+from db import SQLAlchemySessionManager, Session
 
 # falcon.API instances are callable WSGI apps
-app = falcon.API()
+APP = falcon.API(middleware=[
+    SQLAlchemySessionManager(Session),
+])
 
 # set x-www-form-urlencoded to be available via req.params
-app.req_options.auto_parse_form_urlencoded = True
+APP.req_options.auto_parse_form_urlencoded = True
 
 # Resources are represented by long-lived class instances
-sample = SampleResource()
-appliances = AppliancesResource()
+SAMPLE = SampleResource()
 
-# Routes
-app.add_route('/sample', sample)
-app.add_route('/appliances', appliances)
+# Sample route creation
+APP.add_route('/sample', SAMPLE)

@@ -1,3 +1,5 @@
+"""Config file for models package"""
+
 # Declarative Base
 from .declarative_base import Base
 
