@@ -10,6 +10,7 @@ name = "pypi"
 falcon = "*"
 requests = "*"
 sqlalchemy = "*"
+"psycopg2" = "*"
 
 
 [dev-packages]
